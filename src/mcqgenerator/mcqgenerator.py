@@ -36,8 +36,8 @@ quiz_generation_prompt = PromptTemplate(
     template=TEMPLATE
 )
 
-quiz_chain = LLMChain(llm=llm, prompts = quiz_generation_prompt,output_key="quiz",verbose=True)
-
+quiz_chain = LLMChain(llm=llm, prompt = quiz_generation_prompt,output_key="quiz",verbose=True)
+# quiz_chain = LLMChain(llm=llm,prompt = quiz_generation_prompt,output_key="quiz",verbose=True)
 TEMPLATE2="""
 You are an expert english grammarian and writer. Given a Multiple Choice Quiz for {subject} students.\
 You need to evaluate the complexity of the question and give a complete analysis of the quiz. Only use at max 50 words for complexity analysis. 
